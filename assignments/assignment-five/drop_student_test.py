@@ -6,7 +6,10 @@ import Professor
 def test_student(prof_system):
     name = 'yted91'
     course = 'software_engineering'
-    assert prof_system.drop_student(name, course)
+    if prof_system.drop_student(name, course) is None:
+        assert True
+    else:
+        assert False
 
 
 @pytest.fixture

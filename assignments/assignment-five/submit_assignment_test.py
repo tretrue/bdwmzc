@@ -5,13 +5,10 @@ import Student
 
 def test_submit(student_system):
     course = 'cloud_computing'
-    assignment_name = 'assignment2'
+    assignment_name = 'assignment3'
     submission = 'Blah Blah Blah'
     submission_date = '01/01/20'
-    if student_system.submit_assignment(course, assignment_name, submission, submission_date) is None:
-        assert True
-    else:
-        assert False
+    assert student_system.submit_assignment(course, assignment_name, submission, submission_date)
 
 
 @pytest.fixture
